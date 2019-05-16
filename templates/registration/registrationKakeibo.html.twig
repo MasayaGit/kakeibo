@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block page %}{{title}}{% endblock %}
+{% block title %}{{title}}{% endblock %}
+
+{% block body %}
+    <script>
+        $(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+    <input type="text" id="datepicker">
+
+
+{% endblock %}
