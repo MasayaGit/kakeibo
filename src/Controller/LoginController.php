@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 class LoginController extends AbstractController
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/", name="login")
      */
     public function login(Request $request)
     {
@@ -49,8 +49,6 @@ class LoginController extends AbstractController
                 'form' => $form->createView(),
             ]);
         }
-
-
     }
 
 

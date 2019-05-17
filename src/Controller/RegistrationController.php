@@ -37,7 +37,7 @@ class RegistrationController extends AbstractController
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($person);
             $manager->flush();
-            return $this->redirect('/login');
+            return $this->redirect('/');
         } else {
             return $this->render('registration/registrationPerson.html.twig', [
                 'title' => 'registrationPerson',
