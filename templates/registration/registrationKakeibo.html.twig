@@ -4,13 +4,11 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block body %}
-    <script>
-        $(function() {
-            $("#datepicker").datepicker();
-        });
-    </script>
 
-    <input type="text" id="datepicker">
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
 
+    <a href="/homepage">ホームページへ</a>
 
 {% endblock %}

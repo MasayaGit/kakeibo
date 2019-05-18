@@ -3,23 +3,40 @@
 namespace App\Controller;
 
 use App\Entity\Person;
+use App\Entity\Cost;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 use App\Form\PersonType;
+use App\Form\CostType;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegistrationController extends AbstractController
 {
     /**
-     * @Route("/registrationKakeibo", name="registrationKakeibo")
+     * @Route("/registrationKakeibo/{id}", name="registrationKakeibo")
      */
-    public function registrationKakeibo()
+    public function registrationKakeibo(Request $request,Person $person)
     {
-        return $this->render('registration/registrationKakeibo.html.twig', [
-            'title'=> "register",
-        ]);
+        $cost = new Cost();
+        $form = $this->createForm(CostType::class, $cost);
+        $form->handleRequest($request);
+
+        if ($request->getMethod() == 'POST'){
+            $cost = $form->getData();
+            $cost->setPerson($person);
+            $manager = $this->getDoctrine()->getManager();
+            $manager->persist($cost);
+            $manager->flush();
+            return $this->redirect('/');
+        } else {
+            return $this->render('registration/registrationKakeibo.html.twig', [
+                'title' => 'registrationKakeibo',
+                'form' => $form->createView(),
+
+            ]);
+        }
     }
 
 

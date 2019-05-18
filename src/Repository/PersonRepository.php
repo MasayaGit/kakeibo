@@ -68,4 +68,10 @@ class PersonRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
 }
