@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block page %}{{title}}{% endblock %}
+{% block title %}{{title}}{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for item in cost %}
+            <li>{{item.id}}</li>
+            <li>{{item.price}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -19,6 +19,17 @@ class CostRepository extends ServiceEntityRepository
         parent::__construct($registry, Cost::class);
     }
 
+    public function findByCategory($person,$value)
+    {
+        $builder = $this->createQueryBuilder('c');
+        return $builder
+            ->where($builder->expr()->eq('c.person', '?1'))
+            ->andWhere($builder->expr()->eq('c.category', '?2'))
+            ->setParameters(array(1 => $person, 2 => $value))
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Cost[] Returns an array of Cost objects
     //  */

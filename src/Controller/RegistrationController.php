@@ -40,7 +40,6 @@ class RegistrationController extends AbstractController
             return $this->render('registration/registrationKakeibo.html.twig', [
                 'title' => 'registrationKakeibo',
                 'form' => $form->createView(),
-
             ]);
         }
     }
