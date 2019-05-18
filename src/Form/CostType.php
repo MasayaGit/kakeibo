@@ -28,9 +28,9 @@ class CostType extends AbstractType
             ->add('price', IntegerType::class)
             ->add('category', ChoiceType::class, [
                  'choices' => [
-                    '食費' => true,
-                    '娯楽' => false,
-                    '交通費' => null,
+                    '食費' => '食費',
+                    '娯楽' => '娯楽',
+                    '交通費' => '交通費',
                   ]])
             ->add('time', DateType::class,['widget' => 'choice','format'=>'yyyy-MM-dd',])
             ->add('save', SubmitType::class, array('label' => 'Click'));

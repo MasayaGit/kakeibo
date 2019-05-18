@@ -29,7 +29,13 @@ class RegistrationController extends AbstractController
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($cost);
             $manager->flush();
-            return $this->redirect('/');
+            $repository = $this->getDoctrine()
+                ->getRepository(Person::class);
+            $nameResult = $repository->findByName($person->getName());
+            return $this->render('homepage/index.html.twig', [
+                'title' => "homepage",
+                'person' => $nameResult,
+            ]);
         } else {
             return $this->render('registration/registrationKakeibo.html.twig', [
                 'title' => 'registrationKakeibo',
