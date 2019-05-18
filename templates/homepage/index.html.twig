@@ -4,15 +4,13 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block body %}
-    {{name}}
-    {% if person != null %}
-        <ul>
-            {% for item in person %}
-                <a href=/registrationKakeibo/{{item.id}}>家計簿に登録する</a>
-                <li>{{item.id}}</li>
-                <li>{{item.name}}</li>
-                <li>{{item.password}}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <ul>
+        {% for item in person %}
+            <a href=/registrationKakeibo/{{item.id}}>家計簿に登録する</a>
+            <li>{{item.id}}</li>
+            <li>{{item.name}}</li>
+            <li>{{item.password}}</li>
+        {% endfor %}
+    </ul>
+    ok
 {% endblock %}

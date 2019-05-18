@@ -32,7 +32,6 @@ class LoginController extends AbstractController
 
                 return $this->render('homepage/index.html.twig', [
                     'title' => "homepage",
-                    'name' => $namestr,
                     "person" => $nameResult,
                 ]);
 
