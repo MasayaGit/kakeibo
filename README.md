@@ -19,13 +19,19 @@ name: test
 
 password: 1234
 
-##table
+## table
 
 person
 
 |id|name|password|
 |:---:|:---:|:---:|
 |id|名前|パスワード|
+
+cost
+
+|id|person_id|costname|price|category|time|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|id|personのid|名前|価格|カテゴリー|時間|
 
 ## Reference
 PHPフレームワーク Symfony 4入門
