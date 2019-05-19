@@ -113,10 +113,7 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
         // line 13
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 13, $this->source); })()), 0, [], "array", false, false, false, 13), "id", [], "any", false, false, false, 13), "html", null, true);
         echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Show</div></a>
-                    <a class=\"nav-link\" href=/";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 14, $this->source); })()), 0, [], "array", false, false, false, 14), "id", [], "any", false, false, false, 14), "html", null, true);
-        echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                    <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
                 </div>
             </div>
         </div>
@@ -152,7 +149,7 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
 
     public function getDebugInfo()
     {
-        return array (  128 => 21,  118 => 14,  114 => 13,  110 => 12,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
+        return array (  125 => 21,  114 => 13,  110 => 12,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -170,7 +167,7 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
                 <div class=\"row\">
                     <a class=\"nav-link\" href=/registrationKakeibo/{{person[0].id}}\"><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Register</div></a>
                     <a class=\"nav-link\" href=/showcost/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Show</div></a>
-                    <a class=\"nav-link\" href=/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                    <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
                 </div>
             </div>
         </div>
