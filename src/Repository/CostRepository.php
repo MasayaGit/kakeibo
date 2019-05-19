@@ -30,6 +30,52 @@ class CostRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function findByPerson($value)
+    {
+        $builder = $this->createQueryBuilder('c');
+        return $builder
+            ->where($builder->expr()->eq('c.person', '?1'))
+            ->setParameter(1 ,$value)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findByYear($person,$value)
+    {
+
+        $builder = $this->createQueryBuilder('c');
+        return $builder
+            ->where($builder->expr()->eq('c.person', '?1'))
+            ->andWhere($builder->expr()->like('c.time', '?2'))
+            ->setParameters(array(1 => $person, 2 => $value.'%'))
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findByMonth($person,$value)
+    {
+
+        $builder = $this->createQueryBuilder('c');
+        return $builder
+            ->where($builder->expr()->eq('c.person', '?1'))
+            ->andWhere($builder->expr()->like('c.time', '?2'))
+            ->setParameters(array(1 => $person, 2 =>'%'.$value.'%'))
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findByDay($person,$value)
+    {
+
+        $builder = $this->createQueryBuilder('c');
+        return $builder
+            ->where($builder->expr()->eq('c.person', '?1'))
+            ->andWhere($builder->expr()->like('c.time', '?2'))
+            ->setParameters(array(1 => $person, 2 =>$value))
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Cost[] Returns an array of Cost objects
     //  */

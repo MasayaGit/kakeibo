@@ -4,10 +4,13 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block body %}
+    {% set sumPrice = 0 %}
     <ul>
         {% for item in cost %}
-            <li>{{item.id}}</li>
+            <li>{{item.costname}}</li>
             <li>{{item.price}}</li>
+            {% set sumPrice = sumPrice + item.price %}
         {% endfor %}
     </ul>
+    {{ sumPrice }}
 {% endblock %}
