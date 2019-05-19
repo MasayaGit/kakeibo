@@ -1,69 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" >
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css" >
+    <head>
 
-    <meta charset="UTF-8">
-    <title>{% block page %}{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
-    <style>
-        body {
-            padding:0px 30px;
-            color:#666;
-        }
+        <meta charset="UTF-8">
 
-        h1 {
-            font-size:72pt;
-            font-weight:bold;
-            text-align:right;
-            letter-spacing:-8px;
-            color:#f0f0f0;
-            margin:-30px -25px;
-        }
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/style.css" rel="stylesheet">
 
-        div.body {
-            margin:-70px 10px 10px 10px;
-            font-size:18pt;
-            color:#777;
-        }
+        {% block javascripts %}
+            <script src="js/bootstrap.min.js"></script>
+        {% endblock %}
 
-        div#footer {
-            position: fixed;
-            bottom: 25px;
-            left: 10px;
-            font-size:10pt;
-            color:#aaa;
-        }
+        <title>{% block page %}{% endblock %}</title>
 
-        th {
-            background:#009;
-            color:white;
-            padding:5px 15px;
-            font-size:14pt;
-        }
 
-        td {
-            background:#eee;
-            padding:5px 15px;
-        }
+        <style type="text/css">
+            {% block stylesheets %}{% endblock %}
+            .header {
+                text-align: left;
+                height: 3em;
+                line-height: 3em;
+                color: #585858;
+                font-size: 20px;
+            }
+            .body{
+                text-align: center;
+            }
+            .footer{
+                position: fixed;
+                bottom: 0px;
+            }
+        </style>
 
-    </style>
-</head>
-<body>
-<h1>{% block title %}{% endblock %}</h1>
-<div class="body">
-    {% block body %}{% endblock %}
-</div>
-<div id="footer">
-    <p>copyright 2019 MasayaSuzuki.
-</div>
-{% block javascripts %}{% endblock %}
-</body>
+    </head>
+
+
+    <body>
+
+        <div class="body">
+            {% block body %}{% endblock %}
+        </div>
+
+
+        <div id="footer">
+            <p class="text-center">copyright 2019 MasayaSuzuki.</p>
+        </div>
+
+    </body>
 </html>
 
 
