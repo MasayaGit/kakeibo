@@ -108,7 +108,6 @@ class ShowCostController extends AbstractController
             if ($selectedchoice  == 'month'){
                 $selectedtime = $selectedtime->format('y-m');
                 $selectedtime = '20'.$selectedtime;
-                var_dump($selectedtime);
                 $result = $repository->findByMonth($person,$selectedtime);
             }
             if ($selectedchoice  == 'day'){

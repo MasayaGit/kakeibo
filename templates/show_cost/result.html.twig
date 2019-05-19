@@ -15,7 +15,11 @@
         </div>
     </nav>
 
-    {% set sumPrice = 0 %}
+    {% set sumFoodPrice = 0 %}
+    {% set sumFunPrice = 0 %}
+    {% set sumTrafficPrice = 0 %}
+
+
     <table class="table">
         <thead>
             <tr>
@@ -32,11 +36,49 @@
                 <th>{{item.price}}</th>
                 <th>{{item.category}}</th>
             </tr>
-            {% set sumPrice = sumPrice + item.price %}
+            {% if item.category == '食費' %}
+                {% set sumFoodPrice = sumFoodPrice  + item.price %}
+            {% endif %}
+
+            {% if item.category == '娯楽' %}
+                {% set sumFunPrice = sumFunPrice  + item.price %}
+            {% endif %}
+
+            {% if item.category == '交通費' %}
+                {% set sumTrafficPrice = sumTrafficPrice  + item.price %}
+            {% endif %}
+
         {% endfor %}
         </tbody>
 
     </table>
 
-    {{ sumPrice }}
+    <canvas id="myPieChart"></canvas>
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+
+    <script>
+      var ctx = document.getElementById("myPieChart");
+      var myPieChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ["食費", "娯楽", "交通費"],
+          datasets: [{
+              backgroundColor: [
+                  "#BB5179",
+                  "#FAFF67",
+                  "#58A27C"
+              ],
+              data: [{{sumFoodPrice}}, {{ sumFunPrice }},{{ sumTrafficPrice }}
+              ]
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'カテゴリー別 割合'
+          }
+        }
+      });
+      </script>
 {% endblock %}
