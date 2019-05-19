@@ -4,13 +4,39 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block body %}
+
+    <nav class="navbar navbar-expand-lg navbar-light"style="background-color:#CED8F6;">
+        <div class="navbar-nav" id="navbarSupportedContent">
+            <div class="container">
+                <div class="row">
+                    <a class="nav-link" href=/><div class="col-xs-12 col-sm-6 col-md-1 header">Logout</div></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     {% set sumPrice = 0 %}
-    <ul>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>costname</th>
+                <th>price</th>
+                <th>category</th>
+            </tr>
+        </thead>
+
+        <tbody>
         {% for item in cost %}
-            <li>{{item.costname}}</li>
-            <li>{{item.price}}</li>
+            <tr>
+                <th>{{item.costname}}</th>
+                <th>{{item.price}}</th>
+                <th>{{item.category}}</th>
+            </tr>
             {% set sumPrice = sumPrice + item.price %}
         {% endfor %}
-    </ul>
+        </tbody>
+
+    </table>
+
     {{ sumPrice }}
 {% endblock %}

@@ -4,15 +4,23 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block body %}
-    <ul>
-        {% for item in person %}
-            <a href=/registrationKakeibo/{{item.id}}>家計簿に登録する</a>
-            <a href=/showcost/{{item.id}}>家計簿を確認する</a>
 
-            <li>{{item.id}}</li>
-            <li>{{item.name}}</li>
-            <li>{{item.password}}</li>
-        {% endfor %}
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-light"style="background-color:#CED8F6;">
+        <div class="navbar-nav" id="navbarSupportedContent">
+            <div class="container">
+                <div class="row">
+                    <a class="nav-link" href=/registrationKakeibo/{{person[0].id}}"><div class="col-xs-12 col-sm-6 col-md-1 header">Register</div></a>
+                    <a class="nav-link" href=/showcost/{{person[0].id}}><div class="col-xs-12 col-sm-6 col-md-1 header">Show</div></a>
+                    <a class="nav-link" href=/{{person[0].id}}><div class="col-xs-12 col-sm-6 col-md-1 header">Logout</div></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">こんにちは{{person[0].name}}さん</h1>
+        <p class="lead">Registerで家計簿の登録、Showで家計簿の確認ができます</p>
+    </main>
+
 
 {% endblock %}

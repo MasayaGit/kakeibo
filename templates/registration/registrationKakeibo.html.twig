@@ -5,8 +5,14 @@
 
 {% block body %}
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">家計簿を登録して下さい</h1>
+        <p class="lead">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </p>
+    </main>
+
 
 {% endblock %}
