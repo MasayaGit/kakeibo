@@ -1,6 +1,10 @@
 # kakeibo
 家計簿アプリ
 
+#framework
+Symfony4
+Bootstrap
+
 ## Install
 
 ```
@@ -12,6 +16,7 @@ $ http://127.0.0.1:8000
 test用
 
 name: test
+
 password: 1234
 
 ## Reference
