@@ -20,6 +20,7 @@ name: test
 password: 1234
 
 ##table
+
 person
 
 |id|name|password|
