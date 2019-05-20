@@ -6,6 +6,10 @@ Symfony4
 
 Bootstrap
 
+## MyEnvironment
+PHP 7.1.16
+SQLite 3.19.3
+
 ## Install
 
 ```
