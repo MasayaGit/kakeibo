@@ -105,6 +105,11 @@ class __TwigTemplate_a93915140c989663a7abb3df075e98c091b2f1e65fb9a9644f3a17f087b
                 <div class=\"container\">
                     <div class=\"row\">
                         <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                        <a class=\"nav-link\" href=/accesshomepage/";
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 12, $this->source); })()), 0, [], "array", false, false, false, 12), "id", [], "any", false, false, false, 12), "html", null, true);
+        echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">homepage</div></a>
+
                     </div>
                 </div>
             </div>
@@ -117,12 +122,12 @@ class __TwigTemplate_a93915140c989663a7abb3df075e98c091b2f1e65fb9a9644f3a17f087b
             <h1> 条件指定 </h1>
             <ul class=\"list-group\">
                 <li class=\"list-group-item\"> <a href=/showcostByCategory/";
-        // line 23
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 23, $this->source); })()), 0, [], "array", false, false, false, 23), "id", [], "any", false, false, false, 23), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 25, $this->source); })()), 0, [], "array", false, false, false, 25), "id", [], "any", false, false, false, 25), "html", null, true);
         echo ">カテゴリーで確認する</a></li>
                 <li class=\"list-group-item\"><a href=/showcostByYear/";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 24, $this->source); })()), 0, [], "array", false, false, false, 24), "id", [], "any", false, false, false, 24), "html", null, true);
+        // line 26
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 26, $this->source); })()), 0, [], "array", false, false, false, 26), "id", [], "any", false, false, false, 26), "html", null, true);
         echo ">年で確認する</a></li>
             </ul>
         </div>
@@ -147,7 +152,7 @@ class __TwigTemplate_a93915140c989663a7abb3df075e98c091b2f1e65fb9a9644f3a17f087b
 
     public function getDebugInfo()
     {
-        return array (  125 => 24,  121 => 23,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
+        return array (  130 => 26,  126 => 25,  110 => 12,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -163,6 +168,8 @@ class __TwigTemplate_a93915140c989663a7abb3df075e98c091b2f1e65fb9a9644f3a17f087b
                 <div class=\"container\">
                     <div class=\"row\">
                         <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                        <a class=\"nav-link\" href=/accesshomepage/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">homepage</div></a>
+
                     </div>
                 </div>
             </div>

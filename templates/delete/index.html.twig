@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block page %}{{title}}{% endblock %}
+{% block title %}{{title}}{% endblock %}
+
+{% block body %}
+
+    <nav class="navbar navbar-expand-lg navbar-light"style="background-color:#CED8F6;">
+        <div class="navbar-nav" id="navbarSupportedContent">
+            <div class="container">
+                <div class="row">
+                    <a class="nav-link" href=/><div class="col-xs-12 col-sm-6 col-md-1 header">Logout</div></a>
+                    <a class="nav-link" href=/accesshomepage/{{person[0].id}}><div class="col-xs-12 col-sm-6 col-md-1 header">homepage</div></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>costname</th>
+            <th>price</th>
+            <th>category</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for item in cost %}
+            <tr>
+                <th>{{item.id}}</th>
+                <th>{{item.costname}}</th>
+                <th>{{item.price}}</th>
+                <th>{{item.category}}</th>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+
+    <h2> 削除したいもののidを入力して下さい </h2>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+
+{% endblock %}

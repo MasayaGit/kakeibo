@@ -32,6 +32,8 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
         '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception::showAction'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
         '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+        'access_homepage' => [['id'], ['_controller' => 'App\\Controller\\AccessHomepageController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/accesshomepage']], [], []],
+        'delete' => [['id'], ['_controller' => 'App\\Controller\\DeleteController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], []],
         'login' => [[], ['_controller' => 'App\\Controller\\LoginController::login'], [], [['text', '/']], [], []],
         'registrationKakeibo' => [['id'], ['_controller' => 'App\\Controller\\RegistrationController::registrationKakeibo'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/registrationKakeibo']], [], []],
         'registrationPerson' => [[], ['_controller' => 'App\\Controller\\RegistrationController::registrationPerson'], [], [['text', '/registrationPerson']], [], []],
