@@ -106,21 +106,25 @@ class __TwigTemplate_1260e1a4984484fa606a189e9a4c7c804bcf21c09f12c9d8b9ba69f5e7f
             <div class=\"container\">
                 <div class=\"row\">
                     <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                    <a class=\"nav-link\" href=/accesshomepage/";
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 13, $this->source); })()), 0, [], "array", false, false, false, 13), "id", [], "any", false, false, false, 13), "html", null, true);
+        echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">homepage</div></a>
                 </div>
             </div>
         </div>
     </nav>
 
     ";
-        // line 18
-        $context["sumFoodPrice"] = 0;
         // line 19
-        echo "    ";
-        $context["sumFunPrice"] = 0;
+        $context["sumFoodPrice"] = 0;
         // line 20
         echo "    ";
-        $context["sumTrafficPrice"] = 0;
+        $context["sumFunPrice"] = 0;
         // line 21
+        echo "    ";
+        $context["sumTrafficPrice"] = 0;
+        // line 22
         echo "
 
     <table class=\"table\">
@@ -134,64 +138,64 @@ class __TwigTemplate_1260e1a4984484fa606a189e9a4c7c804bcf21c09f12c9d8b9ba69f5e7f
 
         <tbody>
         ";
-        // line 33
+        // line 34
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["cost"]) || array_key_exists("cost", $context) ? $context["cost"] : (function () { throw new RuntimeError('Variable "cost" does not exist.', 33, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["cost"]) || array_key_exists("cost", $context) ? $context["cost"] : (function () { throw new RuntimeError('Variable "cost" does not exist.', 34, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 34
+            // line 35
             echo "            <tr>
                 <th>";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "costname", [], "any", false, false, false, 35), "html", null, true);
-            echo "</th>
-                <th>";
             // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 36), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "costname", [], "any", false, false, false, 36), "html", null, true);
             echo "</th>
                 <th>";
             // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 37), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 37), "html", null, true);
+            echo "</th>
+                <th>";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 38), "html", null, true);
             echo "</th>
             </tr>
             ";
-            // line 39
-            if ((twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 39) == "食費")) {
-                // line 40
-                echo "                ";
-                $context["sumFoodPrice"] = ((isset($context["sumFoodPrice"]) || array_key_exists("sumFoodPrice", $context) ? $context["sumFoodPrice"] : (function () { throw new RuntimeError('Variable "sumFoodPrice" does not exist.', 40, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 40));
+            // line 40
+            if ((twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 40) == "食費")) {
                 // line 41
+                echo "                ";
+                $context["sumFoodPrice"] = ((isset($context["sumFoodPrice"]) || array_key_exists("sumFoodPrice", $context) ? $context["sumFoodPrice"] : (function () { throw new RuntimeError('Variable "sumFoodPrice" does not exist.', 41, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 41));
+                // line 42
                 echo "            ";
             }
-            // line 42
-            echo "
-            ";
             // line 43
-            if ((twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 43) == "娯楽")) {
-                // line 44
-                echo "                ";
-                $context["sumFunPrice"] = ((isset($context["sumFunPrice"]) || array_key_exists("sumFunPrice", $context) ? $context["sumFunPrice"] : (function () { throw new RuntimeError('Variable "sumFunPrice" does not exist.', 44, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 44));
-                // line 45
-                echo "            ";
-            }
-            // line 46
             echo "
             ";
-            // line 47
-            if ((twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 47) == "交通費")) {
-                // line 48
+            // line 44
+            if ((twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 44) == "娯楽")) {
+                // line 45
                 echo "                ";
-                $context["sumTrafficPrice"] = ((isset($context["sumTrafficPrice"]) || array_key_exists("sumTrafficPrice", $context) ? $context["sumTrafficPrice"] : (function () { throw new RuntimeError('Variable "sumTrafficPrice" does not exist.', 48, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 48));
-                // line 49
+                $context["sumFunPrice"] = ((isset($context["sumFunPrice"]) || array_key_exists("sumFunPrice", $context) ? $context["sumFunPrice"] : (function () { throw new RuntimeError('Variable "sumFunPrice" does not exist.', 45, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 45));
+                // line 46
                 echo "            ";
             }
-            // line 50
+            // line 47
+            echo "
+            ";
+            // line 48
+            if ((twig_get_attribute($this->env, $this->source, $context["item"], "category", [], "any", false, false, false, 48) == "交通費")) {
+                // line 49
+                echo "                ";
+                $context["sumTrafficPrice"] = ((isset($context["sumTrafficPrice"]) || array_key_exists("sumTrafficPrice", $context) ? $context["sumTrafficPrice"] : (function () { throw new RuntimeError('Variable "sumTrafficPrice" does not exist.', 49, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["item"], "price", [], "any", false, false, false, 49));
+                // line 50
+                echo "            ";
+            }
+            // line 51
             echo "
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+        // line 53
         echo "        </tbody>
 
     </table>
@@ -213,12 +217,12 @@ class __TwigTemplate_1260e1a4984484fa606a189e9a4c7c804bcf21c09f12c9d8b9ba69f5e7f
                   \"#58A27C\"
               ],
               data: [";
-        // line 72
-        echo twig_escape_filter($this->env, (isset($context["sumFoodPrice"]) || array_key_exists("sumFoodPrice", $context) ? $context["sumFoodPrice"] : (function () { throw new RuntimeError('Variable "sumFoodPrice" does not exist.', 72, $this->source); })()), "html", null, true);
+        // line 73
+        echo twig_escape_filter($this->env, (isset($context["sumFoodPrice"]) || array_key_exists("sumFoodPrice", $context) ? $context["sumFoodPrice"] : (function () { throw new RuntimeError('Variable "sumFoodPrice" does not exist.', 73, $this->source); })()), "html", null, true);
         echo ", ";
-        echo twig_escape_filter($this->env, (isset($context["sumFunPrice"]) || array_key_exists("sumFunPrice", $context) ? $context["sumFunPrice"] : (function () { throw new RuntimeError('Variable "sumFunPrice" does not exist.', 72, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["sumFunPrice"]) || array_key_exists("sumFunPrice", $context) ? $context["sumFunPrice"] : (function () { throw new RuntimeError('Variable "sumFunPrice" does not exist.', 73, $this->source); })()), "html", null, true);
         echo ",";
-        echo twig_escape_filter($this->env, (isset($context["sumTrafficPrice"]) || array_key_exists("sumTrafficPrice", $context) ? $context["sumTrafficPrice"] : (function () { throw new RuntimeError('Variable "sumTrafficPrice" does not exist.', 72, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["sumTrafficPrice"]) || array_key_exists("sumTrafficPrice", $context) ? $context["sumTrafficPrice"] : (function () { throw new RuntimeError('Variable "sumTrafficPrice" does not exist.', 73, $this->source); })()), "html", null, true);
         echo "
               ]
           }]
@@ -252,7 +256,7 @@ class __TwigTemplate_1260e1a4984484fa606a189e9a4c7c804bcf21c09f12c9d8b9ba69f5e7f
 
     public function getDebugInfo()
     {
-        return array (  217 => 72,  195 => 52,  188 => 50,  185 => 49,  182 => 48,  180 => 47,  177 => 46,  174 => 45,  171 => 44,  169 => 43,  166 => 42,  163 => 41,  160 => 40,  158 => 39,  153 => 37,  149 => 36,  145 => 35,  142 => 34,  138 => 33,  124 => 21,  121 => 20,  118 => 19,  116 => 18,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
+        return array (  221 => 73,  199 => 53,  192 => 51,  189 => 50,  186 => 49,  184 => 48,  181 => 47,  178 => 46,  175 => 45,  173 => 44,  170 => 43,  167 => 42,  164 => 41,  162 => 40,  157 => 38,  153 => 37,  149 => 36,  146 => 35,  142 => 34,  128 => 22,  125 => 21,  122 => 20,  120 => 19,  111 => 13,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -269,6 +273,7 @@ class __TwigTemplate_1260e1a4984484fa606a189e9a4c7c804bcf21c09f12c9d8b9ba69f5e7f
             <div class=\"container\">
                 <div class=\"row\">
                     <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                    <a class=\"nav-link\" href=/accesshomepage/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">homepage</div></a>
                 </div>
             </div>
         </div>

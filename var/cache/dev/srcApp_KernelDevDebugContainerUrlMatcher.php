@@ -42,12 +42,15 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                     .')'
                     .'|/accesshomepage/([^/]++)(*:193)'
                     .'|/delete/([^/]++)(*:217)'
-                    .'|/registrationKakeibo/([^/]++)(*:254)'
+                    .'|/re(?'
+                        .'|gistrationKakeibo/([^/]++)(*:257)'
+                        .'|newal/([^/]++)(*:279)'
+                    .')'
                     .'|/showcost(?'
-                        .'|/([^/]++)(*:283)'
+                        .'|/([^/]++)(*:309)'
                         .'|By(?'
-                            .'|Category/([^/]++)(*:313)'
-                            .'|Year/([^/]++)(*:334)'
+                            .'|Category/([^/]++)(*:339)'
+                            .'|Year/([^/]++)(*:360)'
                         .')'
                     .')'
                 .')/?$}sDu',
@@ -62,10 +65,11 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
             193 => [[['_route' => 'access_homepage', '_controller' => 'App\\Controller\\AccessHomepageController::index'], ['id'], null, null, false, true, null]],
             217 => [[['_route' => 'delete', '_controller' => 'App\\Controller\\DeleteController::index'], ['id'], null, null, false, true, null]],
-            254 => [[['_route' => 'registrationKakeibo', '_controller' => 'App\\Controller\\RegistrationController::registrationKakeibo'], ['id'], null, null, false, true, null]],
-            283 => [[['_route' => 'show_cost', '_controller' => 'App\\Controller\\ShowCostController::index'], ['id'], null, null, false, true, null]],
-            313 => [[['_route' => 'showcostbycategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByCategory'], ['id'], null, null, false, true, null]],
-            334 => [[['_route' => 'showcostbyvategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByYear'], ['id'], null, null, false, true, null]],
+            257 => [[['_route' => 'registrationKakeibo', '_controller' => 'App\\Controller\\RegistrationController::registrationKakeibo'], ['id'], null, null, false, true, null]],
+            279 => [[['_route' => 'renewal', '_controller' => 'App\\Controller\\RenewalController::index'], ['id'], null, null, false, true, null]],
+            309 => [[['_route' => 'show_cost', '_controller' => 'App\\Controller\\ShowCostController::index'], ['id'], null, null, false, true, null]],
+            339 => [[['_route' => 'showcostbycategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByCategory'], ['id'], null, null, false, true, null]],
+            360 => [[['_route' => 'showcostbyvategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByYear'], ['id'], null, null, false, true, null]],
         ];
     }
 }
