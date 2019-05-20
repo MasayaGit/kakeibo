@@ -37,6 +37,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'login' => [[], ['_controller' => 'App\\Controller\\LoginController::login'], [], [['text', '/']], [], []],
         'registrationKakeibo' => [['id'], ['_controller' => 'App\\Controller\\RegistrationController::registrationKakeibo'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/registrationKakeibo']], [], []],
         'registrationPerson' => [[], ['_controller' => 'App\\Controller\\RegistrationController::registrationPerson'], [], [['text', '/registrationPerson']], [], []],
+        'renewal' => [['id'], ['_controller' => 'App\\Controller\\RenewalController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/renewal']], [], []],
         'show_cost' => [['id'], ['_controller' => 'App\\Controller\\ShowCostController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/showcost']], [], []],
         'showcostbycategory' => [['id'], ['_controller' => 'App\\Controller\\ShowCostController::showcostByCategory'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/showcostByCategory']], [], []],
         'showcostbyvategory' => [['id'], ['_controller' => 'App\\Controller\\ShowCostController::showcostByYear'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/showcostByYear']], [], []],

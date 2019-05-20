@@ -101,20 +101,34 @@ class __TwigTemplate_d50ff9ffbf88d3fa9a1c1376b391e2abf60e6770c2019f9cc6b4e923880
 
         // line 7
         echo "
+    <nav class=\"navbar navbar-expand-lg navbar-light\"style=\"background-color:#CED8F6;\">
+        <div class=\"navbar-nav\" id=\"navbarSupportedContent\">
+            <div class=\"container\">
+                <div class=\"row\">
+                    <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                    <a class=\"nav-link\" href=/accesshomepage/";
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 13, $this->source); })()), 0, [], "array", false, false, false, 13), "id", [], "any", false, false, false, 13), "html", null, true);
+        echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">homepage</div></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <main role=\"main\" class=\"inner cover\">
         <h1 class=\"cover-heading\">家計簿を登録して下さい</h1>
         <p class=\"lead\">
             ";
-        // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'form_start');
+        // line 22
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_start');
         echo "
             ";
-        // line 12
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'widget');
+        // line 23
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'widget');
         echo "
             ";
-        // line 13
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_end');
+        // line 24
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), 'form_end');
         echo "
         </p>
     </main>
@@ -141,7 +155,7 @@ class __TwigTemplate_d50ff9ffbf88d3fa9a1c1376b391e2abf60e6770c2019f9cc6b4e923880
 
     public function getDebugInfo()
     {
-        return array (  117 => 13,  113 => 12,  109 => 11,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
+        return array (  131 => 24,  127 => 23,  123 => 22,  111 => 13,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -152,6 +166,17 @@ class __TwigTemplate_d50ff9ffbf88d3fa9a1c1376b391e2abf60e6770c2019f9cc6b4e923880
 {% block title %}{{title}}{% endblock %}
 
 {% block body %}
+
+    <nav class=\"navbar navbar-expand-lg navbar-light\"style=\"background-color:#CED8F6;\">
+        <div class=\"navbar-nav\" id=\"navbarSupportedContent\">
+            <div class=\"container\">
+                <div class=\"row\">
+                    <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
+                    <a class=\"nav-link\" href=/accesshomepage/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">homepage</div></a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main role=\"main\" class=\"inner cover\">
         <h1 class=\"cover-heading\">家計簿を登録して下さい</h1>

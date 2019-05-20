@@ -413,6 +413,13 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\RegistrationController"/>
       </call>
     </service>
+    <service id="App\Controller\RenewalController" class="App\Controller\RenewalController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\RenewalController"/>
+      </call>
+    </service>
     <service id="App\Controller\ShowCostController" class="App\Controller\ShowCostController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -4317,6 +4324,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RenewalController" class="App\Controller\RenewalController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RenewalController" class="App\Controller\RenewalController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RenewalController" class="App\Controller\RenewalController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ShowCostController" class="App\Controller\ShowCostController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ShowCostController" class="App\Controller\ShowCostController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ShowCostController" class="App\Controller\ShowCostController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4496,18 +4506,20 @@
         <argument key="person" type="service" id=".errored..service_locator.wc24vR1.App\Entity\Person"/>
       </argument>
     </service>
-    <service id=".service_locator.FJ9QWjk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.WMf1bWg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccessHomepageController::index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\DeleteController::index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\RegistrationController::registrationKakeibo" type="service" id=".service_locator.wc24vR1"/>
+        <argument key="App\Controller\RenewalController::index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController::index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController::showcostByCategory" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController::showcostByYear" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\AccessHomepageController:index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\DeleteController:index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\RegistrationController:registrationKakeibo" type="service" id=".service_locator.wc24vR1"/>
+        <argument key="App\Controller\RenewalController:index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController:index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController:showcostByCategory" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController:showcostByYear" type="service" id=".service_locator.wc24vR1"/>
@@ -4801,6 +4813,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\RenewalController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\RenewalController"/>
+      <argument>App\Controller\RenewalController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
     <service id=".service_locator.KTVqfp6.App\Controller\ShowCostController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\ShowCostController"/>
       <argument>App\Controller\ShowCostController</argument>
@@ -4899,7 +4917,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.FJ9QWjk"/>
+      <argument type="service" id=".service_locator.WMf1bWg"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5231,7 +5249,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.FJ9QWjk"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.WMf1bWg"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>

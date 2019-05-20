@@ -112,12 +112,16 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
                     <a class=\"nav-link\" href=/showcost/";
         // line 13
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 13, $this->source); })()), 0, [], "array", false, false, false, 13), "id", [], "any", false, false, false, 13), "html", null, true);
-        echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Show</div></a>
+        echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Confirm</div></a>
                     <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
                     <a class=\"nav-link\" href=/delete/";
         // line 15
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 15, $this->source); })()), 0, [], "array", false, false, false, 15), "id", [], "any", false, false, false, 15), "html", null, true);
         echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Delete</div></a>
+                    <a class=\"nav-link\" href=/renewal/";
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 16, $this->source); })()), 0, [], "array", false, false, false, 16), "id", [], "any", false, false, false, 16), "html", null, true);
+        echo "><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Renewal</div></a>
                 </div>
             </div>
         </div>
@@ -125,8 +129,8 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
 
     <main role=\"main\" class=\"inner cover\">
         <h1 class=\"cover-heading\">こんにちは";
-        // line 22
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 22, $this->source); })()), 0, [], "array", false, false, false, 22), "name", [], "any", false, false, false, 22), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 23, $this->source); })()), 0, [], "array", false, false, false, 23), "name", [], "any", false, false, false, 23), "html", null, true);
         echo "さん</h1>
         <p class=\"lead\">Registerで家計簿の登録、Showで家計簿の確認ができます</p>
     </main>
@@ -153,7 +157,7 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
 
     public function getDebugInfo()
     {
-        return array (  129 => 22,  119 => 15,  114 => 13,  110 => 12,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
+        return array (  133 => 23,  123 => 16,  119 => 15,  114 => 13,  110 => 12,  103 => 7,  94 => 6,  76 => 4,  58 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -170,9 +174,10 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
             <div class=\"container\">
                 <div class=\"row\">
                     <a class=\"nav-link\" href=/registrationKakeibo/{{person[0].id}}\"><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Register</div></a>
-                    <a class=\"nav-link\" href=/showcost/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Show</div></a>
+                    <a class=\"nav-link\" href=/showcost/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Confirm</div></a>
                     <a class=\"nav-link\" href=/><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Logout</div></a>
                     <a class=\"nav-link\" href=/delete/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Delete</div></a>
+                    <a class=\"nav-link\" href=/renewal/{{person[0].id}}><div class=\"col-xs-12 col-sm-6 col-md-1 header\">Renewal</div></a>
                 </div>
             </div>
         </div>

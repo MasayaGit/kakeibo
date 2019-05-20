@@ -23,15 +23,16 @@ class RegistrationController extends AbstractController
         $form = $this->createForm(CostType::class, $cost);
         $form->handleRequest($request);
 
+        $repository = $this->getDoctrine()
+            ->getRepository(Person::class);
+        $nameResult = $repository->findByName($person->getName());
+
         if ($request->getMethod() == 'POST'){
             $cost = $form->getData();
             $cost->setPerson($person);
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($cost);
             $manager->flush();
-            $repository = $this->getDoctrine()
-                ->getRepository(Person::class);
-            $nameResult = $repository->findByName($person->getName());
             return $this->render('homepage/index.html.twig', [
                 'title' => "homepage",
                 'person' => $person,
@@ -40,6 +41,7 @@ class RegistrationController extends AbstractController
             return $this->render('registration/registrationKakeibo.html.twig', [
                 'title' => 'registrationKakeibo',
                 'form' => $form->createView(),
+                'person' => $nameResult,
             ]);
         }
     }
