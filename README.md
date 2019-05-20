@@ -1,6 +1,8 @@
 # kakeibo
 家計簿アプリ
 
+アプリのスクリーンショットをphotoディレクトリに置いてあります。
+
 ## framework
 Symfony4
 
