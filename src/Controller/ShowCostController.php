@@ -51,6 +51,12 @@ class ShowCostController extends AbstractController
                 ->getForm();;
         $form->handleRequest($request);
 
+
+        $repository = $this->getDoctrine()
+            ->getRepository(Person::class);
+        $nameResult = $repository->findByName($person->getName());
+
+
         if ($request->getMethod() == 'POST'){
             $selected = $form->getData();
 
@@ -61,6 +67,7 @@ class ShowCostController extends AbstractController
             return $this->render('show_cost/result.html.twig', [
                 'title' => "show_cost",
                 'cost' => $result,
+                "person" => $nameResult
             ]);
         } else {
             return $this->render('show_cost/form.html.twig', [
