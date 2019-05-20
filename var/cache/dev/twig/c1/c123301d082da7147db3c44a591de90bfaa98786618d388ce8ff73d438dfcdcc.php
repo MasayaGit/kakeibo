@@ -132,7 +132,7 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
         // line 23
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["person"]) || array_key_exists("person", $context) ? $context["person"] : (function () { throw new RuntimeError('Variable "person" does not exist.', 23, $this->source); })()), 0, [], "array", false, false, false, 23), "name", [], "any", false, false, false, 23), "html", null, true);
         echo "さん</h1>
-        <p class=\"lead\">Registerで家計簿の登録、Showで家計簿の確認ができます</p>
+        <p class=\"lead\">Registerで家計簿の登録、Confirmで家計簿の確認ができます</p>
     </main>
 
 
@@ -185,7 +185,7 @@ class __TwigTemplate_6c8f24c3d8c9b1c30a8f3fa99a3d5a41c391479e24070a01323499db8d0
 
     <main role=\"main\" class=\"inner cover\">
         <h1 class=\"cover-heading\">こんにちは{{person[0].name}}さん</h1>
-        <p class=\"lead\">Registerで家計簿の登録、Showで家計簿の確認ができます</p>
+        <p class=\"lead\">Registerで家計簿の登録、Confirmで家計簿の確認ができます</p>
     </main>
 
 

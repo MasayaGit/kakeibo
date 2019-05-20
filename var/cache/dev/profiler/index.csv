@@ -3258,3 +3258,14 @@ ac58c7,127.0.0.1,GET,http://127.0.0.1:8000/showcostByCategory/js/bootstrap.min.j
 e5da79,127.0.0.1,POST,http://127.0.0.1:8000/showcostByCategory/1,1558361691,,200
 e9e1b7,127.0.0.1,GET,http://127.0.0.1:8000/showcostByCategory/js/bootstrap.min.js,1558361691,5be4a5,200
 5be4a5,127.0.0.1,GET,http://127.0.0.1:8000/showcostByCategory/js/bootstrap.min.js,1558361691,,404
+30a998,127.0.0.1,GET,http://127.0.0.1:8000/,1558362659,,200
+355a43,127.0.0.1,GET,http://127.0.0.1:8000/js/bootstrap.min.js,1558362660,09fa77,200
+09fa77,127.0.0.1,GET,http://127.0.0.1:8000/js/bootstrap.min.js,1558362660,,404
+6e6349,127.0.0.1,POST,http://127.0.0.1:8000/,1558362668,,200
+fab30c,127.0.0.1,GET,http://127.0.0.1:8000/js/bootstrap.min.js,1558362668,,404
+05bfce,127.0.0.1,POST,http://127.0.0.1:8000/,1558362671,,200
+4fbf5a,127.0.0.1,GET,http://127.0.0.1:8000/js/bootstrap.min.js,1558362672,9d576c,200
+9d576c,127.0.0.1,GET,http://127.0.0.1:8000/js/bootstrap.min.js,1558362672,,404
+fe4548,127.0.0.1,POST,http://127.0.0.1:8000/,1558362674,,200
+75302b,127.0.0.1,GET,http://127.0.0.1:8000/js/bootstrap.min.js,1558362674,395e6a,200
+395e6a,127.0.0.1,GET,http://127.0.0.1:8000/js/bootstrap.min.js,1558362674,,404
