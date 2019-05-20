@@ -40,12 +40,14 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                             .'|(*:159)'
                         .')'
                     .')'
-                    .'|/registrationKakeibo/([^/]++)(*:198)'
+                    .'|/accesshomepage/([^/]++)(*:193)'
+                    .'|/delete/([^/]++)(*:217)'
+                    .'|/registrationKakeibo/([^/]++)(*:254)'
                     .'|/showcost(?'
-                        .'|/([^/]++)(*:227)'
+                        .'|/([^/]++)(*:283)'
                         .'|By(?'
-                            .'|Category/([^/]++)(*:257)'
-                            .'|Year/([^/]++)(*:278)'
+                            .'|Category/([^/]++)(*:313)'
+                            .'|Year/([^/]++)(*:334)'
                         .')'
                     .')'
                 .')/?$}sDu',
@@ -58,10 +60,12 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
             149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
             159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-            198 => [[['_route' => 'registrationKakeibo', '_controller' => 'App\\Controller\\RegistrationController::registrationKakeibo'], ['id'], null, null, false, true, null]],
-            227 => [[['_route' => 'show_cost', '_controller' => 'App\\Controller\\ShowCostController::index'], ['id'], null, null, false, true, null]],
-            257 => [[['_route' => 'showcostbycategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByCategory'], ['id'], null, null, false, true, null]],
-            278 => [[['_route' => 'showcostbyvategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByYear'], ['id'], null, null, false, true, null]],
+            193 => [[['_route' => 'access_homepage', '_controller' => 'App\\Controller\\AccessHomepageController::index'], ['id'], null, null, false, true, null]],
+            217 => [[['_route' => 'delete', '_controller' => 'App\\Controller\\DeleteController::index'], ['id'], null, null, false, true, null]],
+            254 => [[['_route' => 'registrationKakeibo', '_controller' => 'App\\Controller\\RegistrationController::registrationKakeibo'], ['id'], null, null, false, true, null]],
+            283 => [[['_route' => 'show_cost', '_controller' => 'App\\Controller\\ShowCostController::index'], ['id'], null, null, false, true, null]],
+            313 => [[['_route' => 'showcostbycategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByCategory'], ['id'], null, null, false, true, null]],
+            334 => [[['_route' => 'showcostbyvategory', '_controller' => 'App\\Controller\\ShowCostController::showcostByYear'], ['id'], null, null, false, true, null]],
         ];
     }
 }

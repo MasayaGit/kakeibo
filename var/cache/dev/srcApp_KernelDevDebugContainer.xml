@@ -385,6 +385,20 @@
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
       <argument>/Users/info/PhpstormProjects/kakeibo/var/log/dev.log</argument>
     </service>
+    <service id="App\Controller\AccessHomepageController" class="App\Controller\AccessHomepageController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\AccessHomepageController"/>
+      </call>
+    </service>
+    <service id="App\Controller\DeleteController" class="App\Controller\DeleteController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\DeleteController"/>
+      </call>
+    </service>
     <service id="App\Controller\LoginController" class="App\Controller\LoginController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -4291,6 +4305,12 @@
         <argument>server:log</argument>
       </call>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AccessHomepageController" class="App\Controller\AccessHomepageController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AccessHomepageController" class="App\Controller\AccessHomepageController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AccessHomepageController" class="App\Controller\AccessHomepageController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DeleteController" class="App\Controller\DeleteController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DeleteController" class="App\Controller\DeleteController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DeleteController" class="App\Controller\DeleteController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4476,13 +4496,17 @@
         <argument key="person" type="service" id=".errored..service_locator.wc24vR1.App\Entity\Person"/>
       </argument>
     </service>
-    <service id=".service_locator.WvFhljT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.FJ9QWjk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\AccessHomepageController::index" type="service" id=".service_locator.wc24vR1"/>
+        <argument key="App\Controller\DeleteController::index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\RegistrationController::registrationKakeibo" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController::index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController::showcostByCategory" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController::showcostByYear" type="service" id=".service_locator.wc24vR1"/>
+        <argument key="App\Controller\AccessHomepageController:index" type="service" id=".service_locator.wc24vR1"/>
+        <argument key="App\Controller\DeleteController:index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\RegistrationController:registrationKakeibo" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController:index" type="service" id=".service_locator.wc24vR1"/>
         <argument key="App\Controller\ShowCostController:showcostByCategory" type="service" id=".service_locator.wc24vR1"/>
@@ -4753,6 +4777,18 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\AccessHomepageController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\AccessHomepageController"/>
+      <argument>App\Controller\AccessHomepageController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\DeleteController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\DeleteController"/>
+      <argument>App\Controller\DeleteController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
     <service id=".service_locator.KTVqfp6.App\Controller\LoginController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\LoginController"/>
       <argument>App\Controller\LoginController</argument>
@@ -4863,7 +4899,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.WvFhljT"/>
+      <argument type="service" id=".service_locator.FJ9QWjk"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5195,7 +5231,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.WvFhljT"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.FJ9QWjk"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>

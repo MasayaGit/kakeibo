@@ -34,7 +34,7 @@ class RegistrationController extends AbstractController
             $nameResult = $repository->findByName($person->getName());
             return $this->render('homepage/index.html.twig', [
                 'title' => "homepage",
-                'person' => $nameResult,
+                'person' => $person,
             ]);
         } else {
             return $this->render('registration/registrationKakeibo.html.twig', [

@@ -113,9 +113,15 @@ class ShowCostController extends AbstractController
             if ($selectedchoice  == 'day'){
                 $result = $repository->findByDay($person,$selectedtime);
             }
+
+            $repository = $this->getDoctrine()
+                ->getRepository(Person::class);
+            $nameResult = $repository->findByName($person->getName());
+
             return $this->render('show_cost/result.html.twig', [
                 'title' => "show_cost",
                 'cost' => $result,
+                "person" => $nameResult,
             ]);
 
         } else {

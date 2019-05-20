@@ -40,6 +40,8 @@ class CostRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+
+
     public function findByYear($person,$value)
     {
 
