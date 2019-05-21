@@ -35,7 +35,7 @@ class RegistrationController extends AbstractController
             $manager->flush();
             return $this->render('homepage/index.html.twig', [
                 'title' => "homepage",
-                'person' => $person,
+                'person' => $nameResult,
             ]);
         } else {
             return $this->render('registration/registrationKakeibo.html.twig', [
