@@ -1,4 +1,7 @@
 {
+    "barryvdh/laravel-debugbar": {
+        "version": "v3.2.3"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -99,11 +102,41 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
+    "illuminate/container": {
+        "version": "v5.8.17"
+    },
+    "illuminate/contracts": {
+        "version": "v5.8.17"
+    },
+    "illuminate/filesystem": {
+        "version": "v5.8.17"
+    },
+    "illuminate/http": {
+        "version": "v5.8.17"
+    },
+    "illuminate/pipeline": {
+        "version": "v5.8.17"
+    },
+    "illuminate/routing": {
+        "version": "v5.8.17"
+    },
+    "illuminate/session": {
+        "version": "v5.8.17"
+    },
+    "illuminate/support": {
+        "version": "v5.8.17"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "maximebf/debugbar": {
+        "version": "v1.15.0"
+    },
     "monolog/monolog": {
         "version": "1.24.0"
+    },
+    "nesbot/carbon": {
+        "version": "2.18.0"
     },
     "nikic/php-parser": {
         "version": "v4.2.1"
