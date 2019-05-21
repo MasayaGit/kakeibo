@@ -1,6 +1,8 @@
 # kakeibo
 家計簿アプリ
 
+https://kakeibo-heroku.herokuapp.com
+
 アプリのスクリーンショットをphotoディレクトリに置いてあります。
 
 ## framework
