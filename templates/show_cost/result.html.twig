@@ -27,6 +27,7 @@
                 <th>costname</th>
                 <th>price</th>
                 <th>category</th>
+                <th>time</th>
             </tr>
         </thead>
 
@@ -36,6 +37,7 @@
                 <th>{{item.costname}}</th>
                 <th>{{item.price}}</th>
                 <th>{{item.category}}</th>
+                <th>{{item.time.format('Y-m-d')}}</th>
             </tr>
             {% if item.category == '食費' %}
                 {% set sumFoodPrice = sumFoodPrice  + item.price %}
