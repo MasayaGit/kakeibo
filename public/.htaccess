@@ -1,6 +1,11 @@
-If “%{HTTP_HOST} != ‘example.com'”
-DirectoryIndex index.html index.php
-AuthUserFile /app/.htpasswd
-AuthType Basic
-AuthName “Restricted Access”
-Require valid-user
+<IfModule mod_rewrite.c>
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    <IfModule mod_alias.c>
+RedirectMatch 302 ^/$ /index.php/
+    </IfModule>
+</IfModule>
